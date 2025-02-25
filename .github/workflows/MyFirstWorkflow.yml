@@ -10,6 +10,10 @@ jobs:
     steps:
       - run: echo "Hello world"
 
-    
-  
-      
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: List files in repository
+        run: |
+          echo "The repo ${{ github.repository}} contains the following files:"
+          tree
