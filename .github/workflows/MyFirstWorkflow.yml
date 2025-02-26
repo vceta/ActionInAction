@@ -4,6 +4,8 @@ on:
     branches: 
       - main
       - "release/**"
+  workflow_dispatch:
+    branches: [*]
 jobs:
   MyfirstJob:
     runs-on: ubuntu-latest
